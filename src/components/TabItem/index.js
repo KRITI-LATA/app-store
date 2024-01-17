@@ -5,7 +5,9 @@ const TabItem = props => {
   const {eachTab, updateTabId, isActive} = props
   const {displayText, tabId} = eachTab
 
-  const activeTabButton = isActive ? 'active-btn' : 'not-active-btn'
+  const activeTabButton = isActive
+    ? 'not-active-btn active-btn'
+    : 'not-active-btn'
 
   const onClickTabButton = () => {
     updateTabId(tabId)
